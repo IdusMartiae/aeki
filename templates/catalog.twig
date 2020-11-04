@@ -1,0 +1,25 @@
+{% extends "base_template.twig" %}
+
+{% block page_title %}
+    Catalog
+{% endblock %}
+
+{% block additional_stylesheets %}
+    <link rel="stylesheet" href="styles/catalog.css">
+{% endblock %}
+
+{% block page_content %}
+    <div class="catalog">
+        {% for product in catalog %}
+            <a href="add-to-cart.php?id={{ product.id }}">
+                <div class="catalog__item">
+                    <div class="catalog__item__name"><input type="submit" class="catalog__item__name_text" value="{{ product.name }}"></div>
+                    <div class="catalog__item__info">
+                        <div class="catalog__item__img"><img src="images/{{ product.img_id }}.png" alt=""></div>
+                        <div class="catalog__item__description">{{ product.description }}</div>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

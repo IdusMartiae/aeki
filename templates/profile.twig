@@ -1,0 +1,41 @@
+{% extends "base_template.twig" %}
+
+{% block page_title %}
+    Profile
+{% endblock %}
+
+{% block additional_stylesheets %}
+    <link rel="stylesheet" href="styles/profile.css">
+{% endblock %}
+
+{% block page_content %}
+    <div class="profile">
+        <div class="profile__user-info">
+            <div class="profile__user-info__username"><h1>user {{ login }}</h1></div>
+            <form method="post" class="user-info">
+                <div class="user-info__container">
+                    <div class="user-info__info-flex">
+                        <label for="full-name">Full name</label>
+                        <input type="text" name="full-name" placeholder="John M. Doe" class="form__user-info__full-name" required>
+                        <label for="address">Address</label>
+                        <input type="text" name="address"  placeholder="123 Dukham Street" class="form__user-info__address" required>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" placeholder="john@example.com" class="form__user-info__email" required>
+                    </div>
+                    <div class="user-info__send"><input type="submit" class="send-button" value="Send"></div>
+                </div>
+            </form>
+        </div>
+        <h1>Shopping list</h1>
+        <hr>
+        <div class="profile__cart-list">
+            {% for product in catalog %}
+                <div class="profile__cart-list__item">
+                <div class="profile__cart-list__item__image"><img class="profile__cart-list__item__image_sized" src="images/{{ product.img_id }}.png" alt=""></div>
+                <div class="profile__cart-list__item__name"><p class="profile__cart-list__item__name_text">{{ product.name }}</p></div>
+                <div class="profile__cart-list__item__delete"><a class="delete_button" href="delete-item.php?id={{ product.id }}">Delete</a></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

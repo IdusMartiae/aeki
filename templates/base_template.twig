@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block page_title %}{% endblock %}</title>
+    <link rel="stylesheet" href="styles/base.css">
+    {% block additional_stylesheets %}
+    {% endblock %}
+</head>
+<body>
+
+<header>
+    <nav class="nav-bar">
+        <a class="nav-bar__item"href="index.php">
+            <b>
+                AEKI
+            </b>
+        </a>
+        <div class="nav-bar__decorative">
+            |
+        </div>
+        <a class="nav-bar__item"href="catalog.php">
+            Catalog
+        </a>
+        <div class="middle-blank"></div>
+        {% if not isUserAuthorized %}
+        <a class="nav-bar__image"href="sign-in.php">
+            <img class="nav-bar__image_proper-size" src="images/profile.gif" alt="">
+        </a>
+        <a class="nav-bar__image"href="sign-in.php">
+            <img class="nav-bar__image_proper-size" src="images/cart.gif" alt="">
+        </a>
+        {% endif %}
+        {% if isUserAuthorized %}
+            <a class="nav-bar__image"href="profile.php">
+                <img class="nav-bar__image_proper-size" src="images/profile.gif" alt="">
+            </a>
+            <a class="nav-bar__image"href="cart.php">
+                <img class="nav-bar__image_proper-size" src="images/cart.gif" alt="">
+            </a>
+        {% endif %}
+    </nav>
+</header>
+
+<main>
+    {% block page_content %}
+    {% endblock %}
+</main>
+</body>
+</html>

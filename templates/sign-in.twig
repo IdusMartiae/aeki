@@ -1,0 +1,27 @@
+{% extends "base_template.twig" %}
+
+{% block page_title %}
+    Sign in
+{% endblock %}
+
+{% block additional_stylesheets %}
+    <link rel="stylesheet" href="styles/sign-in.css">
+{% endblock %}
+
+{% block page_content %}
+    <div class="side-bars">
+        <form method="post">
+            <div class="container">
+                <h1>Sign in</h1>
+                <hr>
+                <input type="text" placeholder="Login" name="login" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <hr>
+                <input type="submit" class="sign-in-form__button" value="Let me in!">
+            </div>
+            <div class="register">
+                <p>I don't have an account! <a style="text-decoration: underline" href="sign-up.php">Sing me up!</a></p>
+            </div>
+        </form>
+    </div>
+{% endblock %}
