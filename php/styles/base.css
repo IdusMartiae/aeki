@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 3vh;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.nav-bar {
+    background-color: white;
+    border-bottom: 1px solid;
+    display: inline-flex;
+    padding: 0 20vw;
+    width: 60vw;
+}
+.nav-bar__item  {
+    padding: 21px 20px;
+    align-self: center;
+
+}
+.nav-bar__decorative {
+    align-self: center;
+    margin-bottom: 1vh;
+    font-size: 5vh;
+}
+.nav-bar__image {
+    align-self: center;
+    margin: 0 20px;
+}
+.middle-blank {
+    width: 35vw;
+}
+.nav-bar__image_proper-size {
+    height: 4vh;
+    width: auto;
+}
+.nav-bar__item:hover {
+    text-decoration: underline;
+}
+.nav-bar__image_proper-size:hover {
+    height: 4.5vh;
+}

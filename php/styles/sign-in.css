@@ -1,0 +1,49 @@
+.side-bars {
+    margin: 10vh 40vw 0 40vw;
+    width: 20vw;
+    border: solid 1px;
+}
+.container {
+    padding: 3vh 2.5vw 1vh 2.5vw;
+}
+h1 {
+    margin: 0;
+    font-size: 5vh;
+    text-align: center;
+}
+hr {
+    border: 1px solid black;
+    margin-bottom: 1vh;
+}
+input[type=text], input[type=password] {
+    padding: 1vh 1vw;
+    margin: 0.3vh 0 0.3vh -0.3vw;
+    border: 1px solid;
+    width: 90%;
+    background-color: white;
+    font-size: 2vh;
+
+}
+input[type=text]:focus, input[type=password]:focus {
+    outline: none;
+    border: 2px solid;
+}
+.sign-in-form__button {
+    width: 6.3vw;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    font-size: 2vh;
+    border: none;
+    margin-left: 4.3vw;
+    margin-bottom: 0;
+}
+.register {
+    border-top: solid 1px;
+    padding: 2vh 1vw;
+}
+p {
+    margin: 0;
+    font-size: 2vh;
+    text-align: center;
+}
