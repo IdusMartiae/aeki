@@ -1,0 +1,16 @@
+{
+    "require": {
+        "twig/twig": "3.0.3",
+        "ext-json": "*",
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "files": [
+            "php/cookie.php"
+        ],
+        "psr-4": {
+            "Aeki\\Loader\\": "php/loader",
+            "Aeki\\Connection\\": "php/connection"
+        }
+    }
+}
